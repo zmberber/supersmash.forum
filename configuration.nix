@@ -49,6 +49,7 @@
   environment.systemPackages = with pkgs; [
     vim
     emacs-nox
+    git
   ];
 
   security = {
