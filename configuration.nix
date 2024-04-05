@@ -12,6 +12,7 @@
         username = "admin";
         passwordFile = "/var/secrets/discourse-admin";
       };
+      hostname = "supersmash.forum";
     };
     postgresql = {
       package = pkgs.postgresql_13;
