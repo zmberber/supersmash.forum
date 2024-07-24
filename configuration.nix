@@ -17,6 +17,10 @@
         username = "admin";
         passwordFile = "/var/secrets/discourse-admin";
       };
+      plugins = with config.services.discourse.package.plugins; [
+        discourse-docs
+        discourse-oauth2-basic
+      ];
       hostname = "supersmash.forum";
     };
     postgresql = {
