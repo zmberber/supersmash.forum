@@ -22,6 +22,14 @@
         discourse-oauth2-basic
       ];
       hostname = "supersmash.forum";
+      mail.outgoing = {
+        serverAddress = "smtp-relay.brevo.com";
+        port = 587;
+        username = "mail@supersmash.forum";
+        passwordFile = "/var/secrets/discourse-smtp";
+      };
+      mail.incoming.enable = true;
+      secretKeyBaseFile = "/var/secrets/discourse-secretKeyBaseFile";
     };
     postgresql = {
       package = pkgs.postgresql_13;
