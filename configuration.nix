@@ -25,7 +25,7 @@
       mail.outgoing = {
         serverAddress = "smtp-relay.brevo.com";
         port = 587;
-        username = "mail@supersmash.forum";
+        username = "7946fc001@smtp-brevo.com";
         passwordFile = "/var/secrets/discourse-smtp";
       };
       mail.incoming.enable = true;
