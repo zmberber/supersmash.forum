@@ -24,7 +24,7 @@
       hostname = "supersmash.forum";
       mail.outgoing = {
         serverAddress = " mail.your-server.de";
-        port = 587;
+        port = 25;
         username = "discourse@supersmash.forum";
         passwordFile = "/var/secrets/discourse-smtp";
       };
