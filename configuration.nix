@@ -28,7 +28,6 @@
         port = 587;
         username = "discourse@supersmash.forum";
         passwordFile = "/var/secrets/discourse-smtp";
-        opensslVerifyMode = "none";
       };
       mail.incoming.enable = true;
       secretKeyBaseFile = "/var/secrets/discourse-secretKeyBaseFile";
