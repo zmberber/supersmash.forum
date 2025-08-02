@@ -34,12 +34,13 @@
         port = 587;
         username = "discourse@supersmash.forum";
         passwordFile = "/var/secrets/discourse-smtp";
+        # incoming.enable = true;
       };
-      mail.incoming.enable = true;
       secretKeyBaseFile = "/var/secrets/discourse-secretKeyBaseFile";
+      enableACME = true;
     };
     postgresql = {
-      package = pkgs.postgresql_13;
+      package = pkgs.postgresql_15;
     };
   };
   boot = {
