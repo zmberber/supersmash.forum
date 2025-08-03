@@ -1,7 +1,5 @@
 { options, config, lib, pkgs, ... }: {
   imports = [
-    # ./hardware-configuration.nix
-    # ./disk-configuration.nix
     # ./cifs-mount.nix
     ./discourse.nix
   ];

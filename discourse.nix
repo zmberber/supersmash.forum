@@ -1,4 +1,9 @@
 {
+  pkgs,
+  config,
+  ...
+}:
+{
   services = {
     discourse = {
       enable = true;
@@ -13,13 +18,15 @@
         discourse-oauth2-basic
       ];
       hostname = "supersmash.forum";
-      mail.outgoing = {
-        serverAddress = "mail.your-server.de";
-        enableStartTLSAuto = true;
-        port = 587;
-        username = "discourse@supersmash.forum";
-        passwordFile = "/var/secrets/discourse-smtp";
-        incoming.enable = true;
+      mail = {
+        outgoing = {
+          serverAddress = "mail.your-server.de";
+          enableStartTLSAuto = true;
+          port = 587;
+          username = "discourse@supersmash.forum";
+          passwordFile = "/var/secrets/discourse-smtp";
+        };
+        # incoming.enable = true;
       };
       siteSettings = {
         max_category_nesting = 3;
@@ -27,8 +34,8 @@
       secretKeyBaseFile = "/var/secrets/discourse-secretKeyBaseFile";
       enableACME = true;
     };
-  };
-  postgresql = {
-    package = pkgs.postgresql_15;
+    postgresql = {
+      package = pkgs.postgresql_15;
+    };
   };
 }
